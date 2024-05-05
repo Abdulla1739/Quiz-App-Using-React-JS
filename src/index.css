@@ -1,0 +1,167 @@
+*{
+  font-family: "Ubuntu Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box; 
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+body{
+  height: 100vh;
+  width: 100%;
+
+  background: repeating-radial-gradient(circle,#ff000000,#e7ce0eeb 70%);
+  /* filter: brightness(0.2); Adjust the value as desired */
+  backdrop-filter: blur(5px); 
+  backdrop-filter: brightness(0.5); 
+
+}
+.container {
+  margin: 0 auto;
+  width: 60%;
+  background: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.474) 8px 8px 0px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+hr{
+  height: 1px;
+  border: none;
+  background: #707070;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.aboutDesc{
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 3%;
+
+}
+.aboutDesc p{
+  margin-bottom: 3%;
+}
+.questions{
+  margin: 0px auto;
+  width: 95%;
+  padding: 15px;
+
+
+}
+.questions h2{
+margin-bottom: 3%;
+}
+.options{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto ;
+  gap: 10px;
+}
+.options li button {
+  margin-bottom: 10px;
+  width: 80%;
+
+}
+button{
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+  transition: 0.5s;
+  --clr:#e7ce0e6a;
+  background: repeating-radial-gradient(circle,#ff000000,#e7ce0eeb 50%);
+}
+button:hover{
+  letter-spacing: 0.25em;
+  background: var(--clr) 60%;
+  box-shadow: 0 0 35px var(--clr);
+  width: 60%;
+  
+
+
+
+
+}
+.result {
+  margin: 20px auto;
+  padding: 15px;
+}
+.result h2{
+  padding-bottom: 30px;
+}
+.result p{
+  padding-bottom: 30px;
+}
+.retry{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.retry span {
+  color: red;
+  font-weight: 800;
+  text-decoration: underline;
+  padding-bottom: 30px;
+}
+.retry button{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.question-answer[data-correct="true"] {
+  color: green;
+}
+
+.question-answer[data-correct="false"] {
+  color: red;
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 70%;
+
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    width: 80%;
+
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .container {
+    width: 85%;
+
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+
+  }
+}
