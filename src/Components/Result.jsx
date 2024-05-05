@@ -35,7 +35,7 @@ const Result = ({ userAnswers, questions, resetQuiz }) => {
             >
               <p style={{ textAlign: "left" }}>
                 <strong>Q{index + 1}:</strong> {question.question}{" "}
-                <strong>A:</strong>{" "}
+                <strong>Ans:</strong>{" "}
                 <i>
                   {
                     question.answerOptions.find((option) => option.isCorrect)
