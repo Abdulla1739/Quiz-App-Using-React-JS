@@ -34,7 +34,8 @@ const Result = ({ userAnswers, questions, resetQuiz }) => {
               style={{ margin: "0px", padding: "0px" }}
             >
               <p style={{ textAlign: "left" }}>
-                <strong>Q{index+1}:</strong> {question.question} <strong>A:</strong>{" "}
+                <strong>Q{index + 1}:</strong> {question.question}{" "}
+                <strong>A:</strong>{" "}
                 <i>
                   {
                     question.answerOptions.find((option) => option.isCorrect)
@@ -46,7 +47,9 @@ const Result = ({ userAnswers, questions, resetQuiz }) => {
           ))}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={handleClose}>Close</Button>
+          <Button variant="warning" onClick={handleClose}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
     </div>

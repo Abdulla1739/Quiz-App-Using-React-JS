@@ -16,7 +16,7 @@ function App() {
   const handleResetQuiz = () => {
     SetCurrentQuestion(0);
     setUserAnswers([]);
-    setQuizStarted(false); 
+    setQuizStarted(false);
   };
   const handleStartQuiz = () => {
     setQuizStarted(true);
@@ -27,29 +27,34 @@ function App() {
       <h1>React Quiz</h1>
       <hr />
       {!quizStarted ? (
-       <div className="aboutDesc">
-       <p>The React Quiz App tests users' knowledge with multiple-choice questions from a JSON file, covering diverse topics. Its clean and intuitive interface includes a prominent start button to begin the quiz.</p>
-       <button onClick={handleStartQuiz}>Start Quiz</button>
-     </div>
+        <div className="aboutDesc">
+          <p>
+            The React Quiz App tests users' knowledge with multiple-choice
+            questions from a JSON file, covering diverse topics. Its clean and
+            intuitive interface includes a prominent start button to begin the
+            quiz.
+          </p>
+          <button onClick={handleStartQuiz}>Start Quiz</button>
+        </div>
       ) : (
         <>
-      {currentQuestion < jsonLibraryQuestion.length && (
-        <div className="index">
-          {currentQuestion + 1} / {jsonLibraryQuestion.length}
-        </div>
-      )}
-      {currentQuestion < jsonLibraryQuestion.length && (
-        <Questions
-          currentQuestionBank={jsonLibraryQuestion[currentQuestion]}
-          onAnswerClick={handleNextQuestion}
-        />
-      )}
-      {currentQuestion === jsonLibraryQuestion.length && (
-        <Result
-          userAnswers={userAnswers}
-          questions={jsonLibraryQuestion}
-          resetQuiz={handleResetQuiz}
-/>
+          {currentQuestion < jsonLibraryQuestion.length && (
+            <div className="index">
+              {currentQuestion + 1} / {jsonLibraryQuestion.length}
+            </div>
+          )}
+          {currentQuestion < jsonLibraryQuestion.length && (
+            <Questions
+              currentQuestionBank={jsonLibraryQuestion[currentQuestion]}
+              onAnswerClick={handleNextQuestion}
+            />
+          )}
+          {currentQuestion === jsonLibraryQuestion.length && (
+            <Result
+              userAnswers={userAnswers}
+              questions={jsonLibraryQuestion}
+              resetQuiz={handleResetQuiz}
+            />
           )}
         </>
       )}
